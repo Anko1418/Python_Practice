@@ -83,6 +83,18 @@ pop = [31.889923, 3.6005229999999999, 33.333216, 12.420476000000001, 40.30192699
        3.4474960000000001, 26.084662000000002, 85.262355999999997, 4.018332, 22.211742999999998, 11.746034999999999,
        12.311143]
 
+col = ['red', 'green', 'blue', 'blue', 'yellow', 'black', 'green', 'red', 'red', 'green', 'blue', 'yellow', 'green',
+       'blue', 'yellow', 'green', 'blue', 'blue', 'red', 'blue', 'yellow', 'blue', 'blue', 'yellow', 'red', 'yellow',
+       'blue', 'blue', 'blue', 'yellow', 'blue', 'green', 'yellow', 'green', 'green', 'blue', 'yellow', 'yellow',
+       'blue', 'yellow', 'blue', 'blue', 'blue', 'green', 'green', 'blue', 'blue', 'green', 'blue', 'green', 'yellow',
+       'blue', 'blue', 'yellow', 'yellow', 'red', 'green', 'green', 'red', 'red', 'red', 'red', 'green', 'red', 'green',
+       'yellow', 'red', 'red', 'blue', 'red', 'red', 'red', 'red', 'blue', 'blue', 'blue', 'blue', 'blue', 'red',
+       'blue', 'blue', 'blue', 'yellow', 'red', 'green', 'blue', 'blue', 'red', 'blue', 'red', 'green', 'black',
+       'yellow', 'blue', 'blue', 'green', 'red', 'red', 'yellow', 'yellow', 'yellow', 'red', 'green', 'green', 'yellow',
+       'blue', 'green', 'blue', 'blue', 'red', 'blue', 'green', 'blue', 'red', 'green', 'green', 'blue', 'blue',
+       'green', 'red', 'blue', 'blue', 'green', 'green', 'red', 'red', 'blue', 'red', 'blue', 'yellow', 'blue', 'green',
+       'blue', 'green', 'yellow', 'yellow', 'yellow', 'red', 'red', 'red', 'blue', 'blue']
+
 # Store pop as a numpy array: np_pop
 np_pop = np.array(pop)
 
@@ -90,7 +102,7 @@ np_pop = np.array(pop)
 np_pop = np_pop * 2
 
 # Update: set s argument to np_pop
-plt.scatter(gdp_cap, life_exp, s=np_pop)
+plt.scatter(gdp_cap, life_exp, s=np_pop, c=col, alpha=0.8)
 
 # Previous customizations
 plt.xscale('log')
