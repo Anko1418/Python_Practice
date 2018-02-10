@@ -19,6 +19,12 @@ row_labels = ['US', 'AUS', 'JAP', 'IN', 'RU', 'MOR', 'EG']
 cars.index = row_labels
 
 # Print cars again
-#print(cars)
+print(cars)
 
 print(cars[cars.loc[:, 'drives_right'] == True])
+
+# Create car_maniac: observations that have a cars_per_cap over 500
+car_maniac = cars[cars['cars_per_cap'] > 500]
+
+# Print car_maniac
+print(car_maniac)
