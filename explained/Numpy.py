@@ -51,6 +51,7 @@ print(np_height[height_more_than_6])
 # above code can be written in single line
 print(np_height[np_height > 6])
 
+
 # Dealing with 2D numpy arrays
 
 # print structure of 2D array
