@@ -106,11 +106,19 @@ for list1 in list_of_lists:
 # 5
 # 6
 
-for index, value in enumerate(python_list):
+# using enumerate
+
+for index, value in enumerate(python_list, start=3):
     print("index is " + str(index) + " and value is "+ str(value))
 # prints
-# index is 0 and value is 1
-# index is 1 and value is 2
-# index is 2 and value is 3
-# index is 3 and value is 4
-# index is 4 and value is 7
+# index is 3 and value is 1
+# index is 4 and value is 2
+# index is 5 and value is 3
+# index is 6 and value is 4
+# index is 7 and value is 7
+
+
+enu = enumerate(python_list)
+
+print(list(enu))
+# prints [(0, 1), (1, 2), (2, 3), (3, 4), (4, 7)]
