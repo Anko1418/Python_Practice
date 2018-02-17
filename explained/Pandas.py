@@ -134,3 +134,47 @@ print(cars[np.logical_and(cars["drives_right"] == True, cars["cars_per_cap"] > 2
 #     cars_per_cap        country  drives_right
 # US           809  United States          True
 
+
+# iterating over DataFrame
+
+for label, row in cars.iterrows():
+    print("label: " + label + " row: " + row["country"])
+    print('----------------')
+
+# prints
+# label: US row: United States
+# ----------------
+# label: AUS row: Australia
+# ----------------
+# label: JAP row: Japan
+
+
+# Manipulating columns in a DataFrame
+
+# add a new column name 'name_length' in cars DataFrame
+
+for label, row in cars.iterrows():
+    cars.loc[label, "name_length"] = len(row["country"])
+
+print(cars)
+
+# prints
+#      cars_per_cap        country  drives_right   name_length
+# US            809  United States          True           13.0
+# AUS           731      Australia         False            9.0
+# JAP           588          Japan         False            5.0
+# IN             18          India         False            5.0
+# RU            200         Russia          True            6.0
+# MOR            70        Morocco          True            7.0
+# EG             45          Egypt          True            5.0
+
+# However above approch is not prefered as each loop ll create a new series object
+
+del(cars["name_length"])
+
+# method mentioned below doesn't take a loop
+cars["name_length"] = cars["country"].apply(len)
+print(cars)
+
+# another example cars["COUNTRY"] = cars["country"].apply(str.upper)
+
