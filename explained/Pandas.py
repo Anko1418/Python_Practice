@@ -1,5 +1,6 @@
 # import statements
 import pandas as pd
+import numpy as np
 
 # initialization
 
@@ -122,3 +123,14 @@ print(cars.iloc[[1, 2], [2]])
 #      drives_right
 # AUS         False
 # JAP         False
+
+
+# operators applied on DataFrame
+
+# show rows where 'drives_right' is equal to 'True' and "cars_per_cap" is greater than 200
+
+print(cars[np.logical_and(cars["drives_right"] == True, cars["cars_per_cap"] > 200)])
+# prints
+#     cars_per_cap        country  drives_right
+# US           809  United States          True
+

@@ -81,3 +81,36 @@ print(python_list)
 del [python_list[-3: -1]]
 print(python_list)
 # prints [1, 2, 3, 4, 7]
+
+
+# Iterating over list
+
+for no in python_list:
+    print(no)
+# prints all numbers in list
+
+print('----------------------------')
+
+for list1 in list_of_lists:
+    print(list1)
+    for elements in list1:
+        print(elements)
+# prints
+# [1, 2]
+# 1
+# 2
+# [3, 4]
+# 3
+# 4
+# [5, 6]
+# 5
+# 6
+
+for index, value in enumerate(python_list):
+    print("index is " + str(index) + " and value is "+ str(value))
+# prints
+# index is 0 and value is 1
+# index is 1 and value is 2
+# index is 2 and value is 3
+# index is 3 and value is 4
+# index is 4 and value is 7
