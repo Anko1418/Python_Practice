@@ -71,10 +71,24 @@ print(np_2d_array[0, :])
 # prints [1 2]
 
 
-# operators applied on  numpy
+# operators applied on numpy
 
 print(np_height[np.logical_and(np_height > 6, np_height < 8)])
 # prints [6.5 7.5 6.5 7.5 7.5 7.5 7.5]
 
 print(np_weight[np.logical_or(np_weight == 69, np_weight == 74)])
 # prints [74 74 69 69 74 74 69]
+
+
+# iterating over numpy array
+
+for value in np.nditer(np_2d_array):
+    print(str(value))
+# prints
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+
