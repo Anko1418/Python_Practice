@@ -25,3 +25,21 @@ print(python_dict)
 print(multilevel_dict["spain"]["capital"])
 # prints madrid
 
+
+# iterating over dictionary
+
+for key, value in multilevel_dict.items():
+    print("Key: " + key + " Value: " + str(value))
+    for key2, value2 in value.items():
+        print("Key2: " + key2 + " Value2: " + str(value2))
+    print('-----------------')
+
+# prints
+# Key: norway Value: {'capital': 'oslo', 'population': 5.084}
+# Key2: capital Value2: oslo
+# Key2: population Value2: 5.084
+# -----------------
+# Key: spain Value: {'capital': 'madrid', 'population': 46.77}
+# Key2: capital Value2: madrid
+# Key2: population Value2: 46.77
+# -----------------
