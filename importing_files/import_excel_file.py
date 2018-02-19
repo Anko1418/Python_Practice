@@ -13,7 +13,15 @@ data = pd.ExcelFile(file)
 print(data.sheet_names)
 # ['anorectic']
 
-# prints the contents of first sheet
-print(data.parse(data.sheet_names[0]))
+# copy the contents of frist sheet in sheet1 DataFrame
+sheet1 = data.parse(data.sheet_names[0])
+
+# print headers
+print(sheet1.head())
 #      weight  mens  fast  binge  vomit  purge  hyper  fami  eman  frie  ...
 # 0         1     1     1      4      4      4      1     1     1     3  ...
+
+# skip second row
+data2 = data.parse(0, skiprows=[1])
+
+print(data2)
