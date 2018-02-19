@@ -19,3 +19,15 @@ pretty_soup = soup.prettify()
 
 # Print the response
 print(pretty_soup)
+
+# Get the title of Guido's webpage: guido_title
+guido_title = soup.title
+
+# Print the title of Guido's webpage to the shell
+print(guido_title)
+
+# Get Guido's text: guido_text
+guido_text = soup.get_text()
+
+# Print Guido's text to the shell
+print(guido_text)
