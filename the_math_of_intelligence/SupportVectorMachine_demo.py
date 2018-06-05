@@ -20,3 +20,5 @@ for d, sample in enumerate(X):
         plt.scatter(sample[0], sample[1], s=120, marker='_', linewidths=2)
     else:
         plt.scatter(sample[0], sample[1], s=120, marker='+', linewidths=2)
+
+plt.show()
